@@ -8,7 +8,10 @@ img { float: right; width: 450px; height: 550px; }
 .header, .footer { text-align: center; }
 
 /* Color */
-fieldset { border: none; background-color: lemonchiffon; }
+fieldset { border: none; background-color: lemonchiffon; margin-top: 0.6em; }
+.header { color: gray; }
 
 /* Typogrpahy */
-
+body { font-family: verdana, sans-serif; font-size: 11pt; }
+body * { font-weight: normal; }
+legend, em { font-weight: bold; }
