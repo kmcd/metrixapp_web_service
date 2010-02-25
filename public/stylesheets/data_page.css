@@ -1,0 +1,29 @@
+/* Layout */
+body { margin: auto; width: 81%; }
+
+table { width: 100%; margin-top: 1em; border-collapse: collapse; }
+td,th { padding: 0.6em; text-align: right; }
+tr td:first-child { text-align: left; }
+
+ol.nav { list-style-type: none; text-align: right; margin: 1.6em 0 4em 0; padding: 0;}
+ol.nav li { display: inline; margin-left: 1em; }
+ol.nav li.name { float: left; margin-left: 0em; }
+img { display: block; }
+
+p.csv { text-align: right; }
+
+/* Color */
+ol.nav { border-bottom: thin solid gainsboro; }
+.event_1 { background-color: whitesmoke; }
+.event_2 { background-color: lightcyan; }
+.event_3 { background-color: lemonchiffon; }
+.event_4 { background-color: palegreen; }
+
+
+/* Typogrpahy */
+body { font-family: verdana, sans-serif; font-size: 11pt; }
+body * { font-weight: normal; }
+legend, em { font-weight: bold; }
+
+ol.nav a { text-decoration: none; }
+ol.nav a:hover { text-decoration: underline; }
