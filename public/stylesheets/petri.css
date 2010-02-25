@@ -1,13 +1,14 @@
 /* Layout */
 body { margin: 0; padding: 0; min-width: 1040px }
-.header, .footer { text-align: center; }
-.call_to_action { margin-left: 1.6em;  width: 49%; float: left; }
 img { float: right; width: 450px; height: 550px; }
 
-.header { margin-bottom: 4em; }
+.call_to_action { margin-left: 1.6em;  width: 49%; float: left; }
 .footer { margin-top: 4em; }
+.header { margin-bottom: 4em; }
+.header, .footer { text-align: center; }
 
 /* Color */
+fieldset { border: none; background-color: lemonchiffon; }
 
 /* Typogrpahy */
 
