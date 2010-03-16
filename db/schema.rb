@@ -9,7 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100225162214) do
+ActiveRecord::Schema.define(:version => 20100316201815) do
+
+  create_table "events", :force => true do |t|
+    t.string   "name"
+    t.text     "data"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "leads", :force => true do |t|
     t.string   "email_address"
