@@ -16,52 +16,52 @@
       <%= content_tag(:div, flash[:error], :class => "error") if flash[:error] %>
       
       <div class='call_to_action'>
-         <p>
-            We're building an application to record web sites monetisation events 
-            so you can make <em>informed decisions</em> about your business. Would you like 
-            to know how many people are:
-            <ul>
-               <li>visiting for the first time</li>
-               <li>purchasing your product</li>
-               <li>leaving before paying</li>
-               <li>using your trial version</li>
-            </ul>
-         </p>
+         <div class='pitch'>
+            <p>
+               We're building an application to record web sites monetisation events 
+               so you can make <em>informed decisions</em> about your business. Would you like 
+               to know how many people are:
+               <ul>
+                  <li>visiting for the first time</li>
+                  <li>purchasing your product</li>
+                  <li>leaving before paying</li>
+                  <li>using your trial version</li>
+               </ul>
+            </p>
+            
+            <p>
+               Just copy a small code snippet into your web page &amp;
+               then view your sales funnel &amp; conversions online in real time.
+            </p>
+            
+            <% form_for Lead.new do |form| %>
+               <fieldset>
+                  <legend>Sign up for a <em>free one month trial</em></legend>
+   
+                  <p>There is no obligation to purchase after your free trial expires.
+                  If you wish to continue using our product, our pricing is $49 per month.</p>
+                  
+                  <p>
+                     We'll send your login details as soon as it's ready.
+                  </p>
+                  
+                  <label>Your email address</label>
+                  <%= form.text_field :email_address %>
+                  <button>Sign me up</button>
+                  
+                  <p>
+                     We promise to safegaurd your email address. If you've any concerns contact 
+                     <a href="http://www.keithmcdonnell.net">Keith</a> 
+                     by phone: + 353 87 127 3927 
+                     or email 
+                     <a href="mailto:&#107;&#101;&#105;&#116;&#104;&#64;&#100;&#97;&#110;&#99;&#105;&#110;&#103;&#116;&#101;&#120;&#116;&#46;&#99;&#111;&#109;">&#107;&#101;&#105;&#116;&#104;&#64;&#100;&#97;&#110;&#99;&#105;&#110;&#103;&#116;&#101;&#120;&#116;&#46;&#99;&#111;&#109;</a>
+                  </p>
+               </fieldset>
+            <% end -%>
+         </div>
          
-         <p>
-            Just copy a small code snippet into your web page &amp;
-            then view your sales funnel &amp; conversions online in real time.
-         </p>
-         
-         <% form_for Lead.new do |form| %>
-            <fieldset>
-               <legend>Sign up for a <em>free one month trial</em></legend>
-
-               <p>There is no obligation to purchase after your free trial expires.
-               If you wish to continue using our product, our pricing is $49 per month.</p>
-               
-               <p>
-                  We'll send your login details as soon as it's ready.
-               </p>
-               
-               <label>Your email address</label>
-               <%= form.text_field :email_address %>
-               <button>Sign me up</button>
-               
-               <p>
-                  We promise to safegaurd your email address. If you've any concerns contact 
-                  <a href="http://www.keithmcdonnell.net">Keith</a> 
-                  by phone: + 353 87 127 3927 
-                  or email 
-                  <a href="mailto:&#107;&#101;&#105;&#116;&#104;&#64;&#100;&#97;&#110;&#99;&#105;&#110;&#103;&#116;&#101;&#120;&#116;&#46;&#99;&#111;&#109;">&#107;&#101;&#105;&#116;&#104;&#64;&#100;&#97;&#110;&#99;&#105;&#110;&#103;&#116;&#101;&#120;&#116;&#46;&#99;&#111;&#109;</a>
-               </p>
-            </fieldset>
-         <% end -%>
+         <img src="images/data_page_2.png" alt="screenshot of data page" />
       </div>
-      
-      <img src="images/data_page_2.png" alt="screenshot of data page" />
-
-      <br clear="all"/>
       
       <div class='footer'>
          <p>Copyright &copy; 2010, DancingText Ltd</p>

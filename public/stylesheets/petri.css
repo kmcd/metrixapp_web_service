@@ -1,9 +1,11 @@
 /* Layout */
 body { margin: 0; padding: 0; min-width: 950px }
-img { float: right; margin: 1em 4em; }
 
-.call_to_action { margin-left: 1.6em;  width: 49%; float: left; }
-.footer { margin-top: 4em; }
+.call_to_action { position: relative; }
+.call_to_action .pitch { position: absolute; top: 0; left: 0; width: 48%; }
+.call_to_action img { position: absolute; top: 0; left: 50%;  }
+
+.footer { margin-top: 4em; clear: both; border: thin solid red; }
 .header, .signup, .error { margin-bottom: 4em; }
 .header, .footer { text-align: center; }
 .signup, .error { text-align: center; padding: 1.6em; }
