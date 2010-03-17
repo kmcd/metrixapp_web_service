@@ -1,4 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
+  # For landing/home page
   map.resources :leads
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -36,6 +37,8 @@ ActionController::Routing::Routes.draw do |map|
   map.root :controller => "leads", :action => "new"
 
   # See how all your routes lay out with "rake routes"
+  
+  # TODO: add validation for date format, eg 1999-12-31
   map.reports 'reports/:start/:end', :controller => "reports", :action => "index"
   
   # Install the default routes as the lowest priority.
