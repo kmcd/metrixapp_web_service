@@ -1,3 +1,9 @@
+<ol>
+   <li><%= link_to 'Last 7 days',   reports_path( format_date(7.days.ago), format_date(0.days.ago) ) %></li>
+   <li><%= link_to 'Last 14 days',  reports_path( format_date(14.days.ago), format_date(0.days.ago) ) %></li>
+   <li><%= link_to 'Last 30 days',  reports_path( format_date(30.days.ago), format_date(0.days.ago) ) %></li>
+</ol>
+
 <table>
    <% @events.group_by {|e| e.name }.each_with_index do |event,index| -%>
       <tr class="event_<%= index %>">

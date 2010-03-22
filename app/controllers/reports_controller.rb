@@ -8,18 +8,6 @@ class ReportsController < ApplicationController
     # and total for date range:
     # [ 'Event 1' => 401, 'Event 2' => 199 ]
     
-    @events = Event.find(:all, :conditions => {:created_at => (start_date..end_date) } )
-  end
-  
-  private
-  
-  def start_date
-    return 6.days.ago if params[:end].blank?
-    Date.parse params[:start]
-  end
-  
-  def end_date
-    return 0.days.ago if params[:end].blank?
-    Date.parse params[:end]
+    @events = Event.find_in_date_range params[:start],  params[:end]
   end
 end
