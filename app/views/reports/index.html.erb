@@ -7,12 +7,11 @@
    // <![CDATA[		
    var so = new SWFObject("amline/amline.swf", "amline", "800", "500", "8", "#FFFFFF");
    so.addVariable("path", "amline/");
+   so.addVariable("chart_data", "<%= @chart.data %>");
    
    // TODO: replace with data/settings rendered inline (easier to test & debug)
-   so.addVariable("chart_data", "<%= @chart_data.to_xml %>");                                       // you can pass chart data as a string directly from this file
-   
-   so.addVariable("settings_file", escape("amline/amline_settings.xml"));  // you can set two or more different settings files here (separated by commas)
-   // so.addVariable("chart_settings", "");                                   // you can pass chart settings as a string directly from this file
+   so.addVariable("settings_file", escape("amline/amline_settings.xml"));     // you can set two or more different settings files here (separated by commas)
+   so.addVariable("chart_settings", "<%= @chart.settings %>");                                   // you can pass chart settings as a string directly from this file
    // so.addVariable("additional_chart_settings", "");                        // you can append some chart settings to the loaded ones
    
    so.write("flashcontent");
