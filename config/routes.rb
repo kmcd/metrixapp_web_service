@@ -40,6 +40,7 @@ ActionController::Routing::Routes.draw do |map|
   
   # TODO: add validation for date format, eg 1999-12-31
   map.reports 'reports/:start/:end', :controller => "reports", :action => "index"
+  map.chart_data 'chart_data/:start/:end', :controller => "reports", :action => "chart_data"
   
   # Install the default routes as the lowest priority.
   # Note: These default routes make all actions in every controller accessible via GET requests. You should

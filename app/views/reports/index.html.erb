@@ -1,14 +1,20 @@
-<ol>
-   <li><%= link_to 'Last 7 days',   reports_path( format_date(7.days.ago), format_date(0.days.ago) ) %></li>
-   <li><%= link_to 'Last 14 days',  reports_path( format_date(14.days.ago), format_date(0.days.ago) ) %></li>
-   <li><%= link_to 'Last 30 days',  reports_path( format_date(30.days.ago), format_date(0.days.ago) ) %></li>
-</ol>
+<script type="text/javascript" src="amline/swfobject.js"></script>
+<div id="flashcontent">
+   <strong>You need to upgrade your Flash Player</strong>
+</div>
 
-<table>
-   <% @events.group_by {|e| e.name }.each_with_index do |event,index| -%>
-      <tr class="event_<%= index %>">
-      <td><%= event.first %></td>
-      <td><%= event.last.count %></td>
-   <% end -%>
-</table>
-
+<script type="text/javascript">
+   // <![CDATA[		
+   var so = new SWFObject("amline/amline.swf", "amline", "800", "500", "8", "#FFFFFF");
+   so.addVariable("path", "amline/");
+   
+   // TODO: replace with data/settings rendered inline (easier to test & debug)
+   so.addVariable("chart_data", "<%= @chart_data.to_xml %>");                                       // you can pass chart data as a string directly from this file
+   
+   so.addVariable("settings_file", escape("amline/amline_settings.xml"));  // you can set two or more different settings files here (separated by commas)
+   // so.addVariable("chart_settings", "");                                   // you can pass chart settings as a string directly from this file
+   // so.addVariable("additional_chart_settings", "");                        // you can append some chart settings to the loaded ones
+   
+   so.write("flashcontent");
+   // ]]>
+</script>

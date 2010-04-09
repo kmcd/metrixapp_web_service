@@ -1,0 +1,11 @@
+Autotest.add_hook :initialize do |at|
+  # Re-run tests if test helper has changed
+  at.add_mapping(/test_helper.rb/) do |f, _|
+    at.files_matching(/^test.*rb$/)
+  end
+  
+  # Mapping for tests ending in *_test.rb
+  at.add_mapping(/_test.rb/) do |f, _|
+    at.files_matching(/^test.*rb$/)
+  end
+end

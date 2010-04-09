@@ -8,6 +8,7 @@ class ReportsController < ApplicationController
     # and total for date range:
     # [ 'Event 1' => 401, 'Event 2' => 199 ]
     
-    @events = Event.find_in_date_range params[:start],  params[:end]
+    @events = Event.find_in_date_range params[:start], params[:end]
+    @chart_data = ChartData.new @events
   end
 end

@@ -13,7 +13,7 @@ namespace :db do
     end
     
     # Last week
-    (14..7).each do |days_previous|
+    (7..14).each do |days_previous|
       create_event(218, 'Acquisition', days_previous)
       create_event(45, 'Activation', days_previous)
       create_event(11, 'Retention', days_previous)
@@ -22,7 +22,7 @@ namespace :db do
     end
     
     # 3 & 4 weeks ago
-    (30..15).each do |days_previous|
+    (15..30).each do |days_previous|
       create_event(197, 'Acquisition', days_previous)
       create_event(34, 'Activation', days_previous)
       create_event(16, 'Retention', days_previous)
@@ -35,6 +35,6 @@ end
 def create_event(records, name, created_at)
   # TODO: randomise each day slightly, say +/- 10%
   records.times do
-    Event.create :name => name, :created_at => created_at.days.ago
+    Event.create! :name => name, :created_at => created_at.days.ago
   end
 end
