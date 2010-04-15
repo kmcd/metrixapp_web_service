@@ -1,7 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-  # For landing/home page
-  map.resources :leads
-
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
@@ -33,18 +30,18 @@ ActionController::Routing::Routes.draw do |map|
   #     admin.resources :products
   #   end
 
+  # For landing/home page
+  map.resources :leads
+  map.resources :reports
+  
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
   map.root :controller => "leads", :action => "new"
-
-  # See how all your routes lay out with "rake routes"
   
-  # TODO: add validation for date format, eg 1999-12-31
-  map.reports 'reports/:start/:end', :controller => "reports", :action => "index"
-  map.chart_data 'chart_data/:start/:end', :controller => "reports", :action => "chart_data"
+  # See how all your routes lay out with "rake routes"
   
   # Install the default routes as the lowest priority.
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
   # consider removing or commenting them out if you're using named routes and resources.
-  map.connect ':controller/:action/:id'
+  # map.connect ':controller/:action/:id'
   # map.connect ':controller/:action/:id.:format'
 end
