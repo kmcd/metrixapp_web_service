@@ -33,6 +33,7 @@ ActionController::Routing::Routes.draw do |map|
   # For landing/home page
   map.resources :leads
   map.resources :reports
+  map.resource :track
   
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
   map.root :controller => "leads", :action => "new"
