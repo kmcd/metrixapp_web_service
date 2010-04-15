@@ -1,8 +1,11 @@
-// Initilise tracking after document has loaded
-
-// Authenticate tracker
-
-// Capture data (cookies, browser)
+/*
+   TODO:
+      Uniquely identify user with cookie
+      Uniquely identify user with user identifier
+      Capture extra data with optional string/json argument
+      Initilise tracking after document has loaded
+      Authenticate tracker with a/c id
+*/
 
 // Persist data with tracking pixel
 function log(name) {
