@@ -1,5 +1,6 @@
 /*
    TODO:
+      Use class as a name space
       Uniquely identify user with cookie
       Uniquely identify user with user identifier
       Capture extra data with optional string/json argument
