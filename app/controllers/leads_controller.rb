@@ -1,6 +1,7 @@
 class LeadsController < ApplicationController
+  layout nil, :only => :new
+  
   def new
-    # flash[:notice] = "Thanks for signing up. We'll send your login shortly."
   end
   
   def create

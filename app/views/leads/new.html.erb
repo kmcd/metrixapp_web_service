@@ -1,74 +1,98 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <html>
-   <head>
-      <title>Website sales conversion dashboard</title>
-      <link rel="stylesheet" type="text/css" href="stylesheets/petri.css" />
-      <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-   </head>
-   <body>
-      <div class='header'>
-         <h1>Website sales conversion dashboard</h1>
-         <h2>Who's staying, paying or leaving your online business ?</h2>
-      </div>
+<head>
+   <title>Petri lander design</title>
+   <script type="text/javascript" src=""></script>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+   <style type="text/css" media='screen'>
+      /* Layout */
+      body           { width: 950px; margin: 0; }
+      #copy,#trust,h1,h2
+                     { padding-left: 1%; }
+      h1,h2          { margin: 0; }
+      #tagline       { margin-bottom: 0.6em; }
+      #call2action   { font-size: 1.6em; }
+      #copy          { width: 48%; float:left; }
+      #screenshots   { width: 48%; float:right;  }
+      #screenshots img { margin: 1.6em; }
+      #trust         { clear: both; padding: 1em 1%; }
+      dt             { margin-bottom: 0.6em; }
+      dd             { margin-bottom: 1em; }
+      dd ol          { padding-left: 1em; }
+      table.contact  { width: 48%; border-collapse: collapse; }
+      table.contact caption
+                     { text-align: left; margin-bottom: 0.6em; }
       
-      <%= content_tag(:div, flash[:notice], :class => "signup") if flash[:notice] %>
-      <%= content_tag(:div, flash[:error], :class => "error") if flash[:error] %>
+      /* Color */
+      body     { color: gray; }
+      #trust   {  background-color: whitesmoke; }
+      h1,em    { color: black; }
       
-      <div class='call_to_action'>
-         <div class='pitch'>
-            <p>
-               Record web sites monetisation events 
-               so you can make <em>informed decisions</em> about your business.
-            </p>
-            
-            <p>
-               Just copy a small code snippet into your web page &amp;
-               then view your sales funnel &amp; conversions online in real time.
-            </p>
-            
-            <% form_for Lead.new do |form| %>
-               <fieldset>
-                  <legend>Sign up for a <em>free one month trial</em></legend>
+      /* Typography */
+      body        { font-size: 14pt; font-family: georgia, times, serif; }
+      h1, h2, #call2action, #trust
+                  { font-family: helvetica, arial, sans-serif; }
+      h1, h2      { letter-spacing:-2px; }
+      h2, h3      { font-weight: normal; }
+      #headline   { font-size: 2.4em; }
+      #tagline    { font-size: 1.6em; }
+      #trust      { font-size: 12pt; }
+      #copy em    { font-style: normal; font-weight: bold; }
+   </style>
+</head>
+<body>
+   <h1 id='headline'>Website sales conversion dashboard</h1>
+   <h2 id='tagline'>Who's staying, paying or leaving your online business ?</h2>
    
-                  <p>There is no obligation to purchase after your free trial expires.
-                  If you wish to continue using our product, our pricing is $9 per month.</p>
-                  
-                  <p>
-                     We'll send your login details as soon as it's ready.
-                  </p>
-                  
-                  <label>Your email address</label>
-                  <%= form.text_field :email_address %>
-                  <button>Sign me up</button>
-                  
-                  <p>
-                     We promise to safegaurd your email address. If you've any concerns contact 
-                     <a href="http://www.keithmcdonnell.net">Keith</a> 
-                     by phone: + 353 87 127 3927 
-                     or email 
-                     <a href="mailto:&#107;&#101;&#105;&#116;&#104;&#64;&#100;&#97;&#110;&#99;&#105;&#110;&#103;&#116;&#101;&#120;&#116;&#46;&#99;&#111;&#109;">&#107;&#101;&#105;&#116;&#104;&#64;&#100;&#97;&#110;&#99;&#105;&#110;&#103;&#116;&#101;&#120;&#116;&#46;&#99;&#111;&#109;</a>
-                  </p>
-               </fieldset>
-            <% end -%>
-         </div>
+   <div id='copy'>
+      <p>
+         Record your web sites monetisation events and make informed business decisions.
+      </p>
+      
+      <p>
+         Simply copy a javascript code into your web page, then view your bottom line in real time.
+      </p>
+      
+      <a id='call2action' href='trial.html'>Free 30-day trial &mdash; Sign up in 60 seconds</a>
+      
+      <dl>
+         <dt>How much does it cost?</dt>
+         <dd><em>Free for 30 days</em> then <em>$9 per month</em>.</dd>
          
-         <img src="images/data_page_2.png" alt="screenshot of data page" />
-      </div>
-      
-      <div class='footer'>
-         <p>Copyright &copy; 2010, DancingText Ltd</p>
-      </div>
-      
-      <script type="text/javascript">
-         var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-         document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-      </script>
-      <script type="text/javascript">
-         try {
-         var pageTracker = _gat._getTracker("UA-8421111-2");
-         pageTracker._trackPageview();
-         } catch(err) {}
-      </script>
-   </body>
+         <dt>How do I get started?</dt>
+         <dd>
+            <ol>
+               <li>Add javascript tracking code to relevant pages</li>
+               <li>Deploy your code to production</li>
+               <li>Monitor your real time dashboard</li>
+            </ol>
+         </dd>
+      </dl>
+   </div>
+   
+   <div id='screenshots'>
+      <img alt="dashboard" src="http://petri.local/images/data_page_2.png">
+   </div>
+   
+   <div id='trust'>
+      <table class="contact">
+         <caption> 
+            Created by <a href='http://www.keithmcdonnell.net'>Keith McDonnell</a>. You can contact me by:
+         </caption>
+         
+         <tr>
+            <td>email</td>
+            <td><a href="mailto:keith@dancingtext.com">keith@dancingtext.com</a></td>
+         </tr>
+         <tr>
+            <td>mobile</td>
+            <td>+353 87 127 3927</td>
+         </tr>
+         <tr>
+            <td>skype</td>
+            <td>keithmmcdonnell</td>
+         </tr>
+      </table>
+   </div>
+</body>
 </html>

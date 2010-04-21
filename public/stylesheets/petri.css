@@ -1,7 +1,7 @@
 /* Layout */
 body { margin: 0; padding: 0; min-width: 950px; margin-left: 4em; }
 
-.call_to_action { position: relative; height: 40em; margin-top: 4em; }
+.call_to_action { position: relative; height: 32em; margin-top: 4em; }
 .call_to_action .pitch { width: 48%; position: absolute; top: 0; left: 0; }
 .call_to_action img { position: absolute; top: 10%; left: 55%;  }
 
