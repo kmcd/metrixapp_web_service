@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+   <title>MetrixApp: website sales conversion dashboard</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+   <%= stylesheet_link_tag 'lander' %>
+</head>
+<body>
+   <h1 id='headline'>Website sales conversion dashboard</h1>
+   <h2 id='tagline'>Who's staying, paying or leaving your online business ?</h2>
+   
+   <div id='copy'>
+      <p>
+         Record your web sites monetisation events and make informed business decisions.
+      </p>
+      
+      <p>
+         Simply copy a javascript code into your web page, then view your bottom line in real time.
+      </p>
+      
+      <% link_to(new_lead_path, :id => 'call2action') do %>
+         Free 30-day trial &mdash; Sign up in 60 seconds
+      <% end %>
+      
+      <%= yield %>
+      
+      <dl>
+         <dt>How much does it cost?</dt>
+         <dd><em>Free for 30 days</em> then <em>$9 per month</em>.</dd>
+         
+         <dt>How do I get started?</dt>
+         <dd>
+            <ol>
+               <li>Add javascript tracking code to relevant pages</li>
+               <li>Deploy your code to production</li>
+               <li>Monitor your real time dashboard</li>
+            </ol>
+         </dd>
+      </dl>
+   </div>
+   
+   <div id='screenshots'>
+      <img alt="dashboard" src="/images/data_page_2.png">
+   </div>
+   
+   <div id='trust'>
+      <table class="contact">
+         <caption> 
+            This software is hand crafted by <a href='http://www.keithmcdonnell.net'>Keith McDonnell</a>. You can contact me by:
+         </caption>
+         
+         <tr>
+            <td>email</td>
+            <td><%= contact_email %></td>
+         </tr>
+         <tr>
+            <td>mobile</td>
+            <td>+353 87 127 3927</td>
+         </tr>
+         <tr>
+            <td>skype</td>
+            <td>keithmmcdonnell</td>
+         </tr>
+      </table>
+   </div>
+   
+   <%= render :partial => 'google_analytics' -%>
+</body>
+</html>

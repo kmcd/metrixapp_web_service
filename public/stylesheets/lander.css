@@ -1,0 +1,43 @@
+/* Layout */
+body           { min-width: 950px; margin: 0; }
+#copy,#trust,h1,h2
+               { padding-left: 1%; }
+h1,h2          { margin: 0; }
+#tagline       { margin-bottom: 0.6em; }
+#call2action   { font-size: 1.6em; }
+#copy          { width: 48%; float:left; }
+#screenshots   { width: 48%; float:right;  }
+#screenshots img { margin: 1.6em; }
+#trust         { clear: both; padding: 1em 1%; }
+dt             { margin-bottom: 0.6em; }
+dd             { margin-bottom: 1em; }
+dd ol          { padding-left: 1em; }
+table.contact  { width: 48%; border-collapse: collapse; }
+table.contact caption
+               { text-align: left; margin-bottom: 0.6em; }
+.modal         { position: fixed; top: 0; left: 0; width: 100%; height: 100%; }
+.dialog        { position: fixed; top: 14%; left: 19%; width: 61.2%; }
+.dialog > *    { padding-right: 10em; padding-left: 9%; }
+.dialog h3     { padding: 0.6em; padding-left: 9%; }
+.dialog form   { padding: 1em 9%;  }
+
+/* Color */
+body           { color: gray; }
+#trust         {  background-color: whitesmoke; }
+h1,em          { color: black; }
+.modal         { background-color: whitesmoke;  opacity: 0.8; z-index: 10; }
+.dialog        { opacity: 0.8; border: thin outset gray; background-color: white; color: black; z-index: 20; }
+.dialog h3     { margin: 0; background-color: AliceBlue; color: black; }
+.dialog form   { background-color: lemonchiffon; }
+
+/* Typography */
+body        { font-size: 12pt; font-family: verdana, sans-serif; }
+h1, h2, #call2action, #trust, .dialog
+            { font-family: helvetica, arial, sans-serif; }
+h1, h2      { letter-spacing:-2px; }
+h2          { font-weight: normal; }
+#headline   { font-size: 2.4em; }
+#tagline    { font-size: 1.6em; }
+#trust      { font-size: 12pt; }
+#copy em    { font-style: normal; }
+.dialog input[type='text'] { padding: 5px; width: 15em; }

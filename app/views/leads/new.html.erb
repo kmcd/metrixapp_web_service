@@ -1,98 +1,30 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-<head>
-   <title>Petri lander design</title>
-   <script type="text/javascript" src=""></script>
-   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-   <style type="text/css" media='screen'>
-      /* Layout */
-      body           { min-width: 950px; margin: 0; }
-      #copy,#trust,h1,h2
-                     { padding-left: 1%; }
-      h1,h2          { margin: 0; }
-      #tagline       { margin-bottom: 0.6em; }
-      #call2action   { font-size: 1.6em; }
-      #copy          { width: 48%; float:left; }
-      #screenshots   { width: 48%; float:right;  }
-      #screenshots img { margin: 1.6em; }
-      #trust         { clear: both; padding: 1em 1%; }
-      dt             { margin-bottom: 0.6em; }
-      dd             { margin-bottom: 1em; }
-      dd ol          { padding-left: 1em; }
-      table.contact  { width: 48%; border-collapse: collapse; }
-      table.contact caption
-                     { text-align: left; margin-bottom: 0.6em; }
-      
-      /* Color */
-      body     { color: gray; }
-      #trust   {  background-color: whitesmoke; }
-      h1,em    { color: black; }
-      
-      /* Typography */
-      body        { font-size: 12pt; font-family: verdana, sans-serif; }
-      h1, h2, #call2action, #trust
-                  { font-family: helvetica, arial, sans-serif; }
-      h1, h2      { letter-spacing:-2px; }
-      h2          { font-weight: normal; }
-      #headline   { font-size: 2.4em; }
-      #tagline    { font-size: 1.6em; }
-      #trust      { font-size: 12pt; }
-      #copy em    { font-style: normal; }
-   </style>
-</head>
-<body>
-   <h1 id='headline'>Website sales conversion dashboard</h1>
-   <h2 id='tagline'>Who's staying, paying or leaving your online business ?</h2>
+<%# TODO: fix z-index issue and nest dialog inside modal div -%>
+<div class='modal'>
+</div>
+
+<div class='dialog'>
+   <h3>Sign up for 30-day free trial</h3>
+   <p>
+      Join our early access program! We should have your account set up by mid May 2010.
+   </p>
    
-   <div id='copy'>
-      <p>
-         Record your web sites monetisation events and make informed business decisions.
-      </p>
+   <% form_for(Lead.new, :class => 'dialog') do |lead_form| -%>
+      <label>Email: </label>
+      <%= lead_form.text_field :email_address %>
       
-      <p>
-         Simply copy a javascript code into your web page, then view your bottom line in real time.
-      </p>
-      
-      <a id='call2action' href='trial.html'>Free 30-day trial &mdash; Sign up in 60 seconds</a>
-      
-      <dl>
-         <dt>How much does it cost?</dt>
-         <dd><em>Free for 30 days</em> then <em>$9 per month</em>.</dd>
-         
-         <dt>How do I get started?</dt>
-         <dd>
-            <ol>
-               <li>Add javascript tracking code to relevant pages</li>
-               <li>Deploy your code to production</li>
-               <li>Monitor your real time dashboard</li>
-            </ol>
-         </dd>
-      </dl>
-   </div>
+      <button>Notify me</button> or <%= link_to 'Cancel', root_path %>.
+   <% end -%>
    
-   <div id='screenshots'>
-      <img alt="dashboard" src="/images/data_page_2.png">
-   </div>
+   <dl>
+      <dt>How does the 30-day free trial work?</dt>
+      <dd>
+         You have full use of our metrics application for 30 days with no 
+         obligation to buy.
+      </dd>
+      
+      <dt>How much will it cost after the trial period expires?</dt>
+      <dd>$9 per month with an unlimited number of user accounts.</dd>
+   </dl>
    
-   <div id='trust'>
-      <table class="contact">
-         <caption> 
-            This software is hand crafted by <a href='http://www.keithmcdonnell.net'>Keith McDonnell</a>. You can contact me by:
-         </caption>
-         
-         <tr>
-            <td>email</td>
-            <td><a href="mailto:keith@dancingtext.com">keith@dancingtext.com</a></td>
-         </tr>
-         <tr>
-            <td>mobile</td>
-            <td>+353 87 127 3927</td>
-         </tr>
-         <tr>
-            <td>skype</td>
-            <td>keithmmcdonnell</td>
-         </tr>
-      </table>
-   </div>
-</body>
-</html>
+   <p>Email <%= contact_email %> with any more questions.</p>
+</div>

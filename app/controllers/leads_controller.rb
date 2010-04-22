@@ -1,5 +1,7 @@
 class LeadsController < ApplicationController
-  layout nil, :only => :new
+  def lander
+    # Multi-variate test keyword combinations
+  end
   
   def new
   end
