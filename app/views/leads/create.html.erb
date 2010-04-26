@@ -1,10 +1,13 @@
 <div class='modal'>
 </div>
 
-<div class='dialog'>
+<div class='dialog success'>
    <h3>Thanks for signing up for 30-day free trial</h3>
+   
    <p>
-      We'll email your account details as soon as they're ready. 
-      should be set up by mid May 2010.
+      We'll email <%= @lead.email_address %> with your login password in approximately two
+      weeks.
    </p>
+   
+   <%= content_tag :p, link_to('Back to homepage', root_path)  %>
 </div>

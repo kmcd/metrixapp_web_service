@@ -9,7 +9,9 @@
       your login details. Your account should be set up by mid May 2010.
    </p>
    
-   <% form_for(Lead.new, :class => 'dialog') do |lead_form| -%>
+   <% form_for(Lead.new, :html => { :class => error_css_for(@lead) }) do |lead_form| -%>
+      <%= error_message_for @lead -%>
+   
       <label>Email: </label>
       <%= lead_form.text_field :email_address %>
       

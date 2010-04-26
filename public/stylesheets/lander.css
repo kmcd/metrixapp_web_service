@@ -27,9 +27,11 @@ body           { color: gray; }
 #trust         {  background-color: whitesmoke; }
 h1,em          { color: black; }
 .modal         { background-color: whitesmoke;  opacity: 0.8; z-index: 10; }
-.dialog        { opacity: 0.8; border: thin outset gray; background-color: white; color: black; z-index: 20; }
+.dialog        { opacity: 0.9; border: thin outset gray; background-color: white; color: black; z-index: 20; }
 .dialog h3     { margin: 0; background-color: AliceBlue; color: black; }
 .dialog form   { background-color: lemonchiffon; }
+.dialog form.error   { background-color: mistyrose; }
+.dialog.success h3 { background-color: PaleGreen; }
 
 /* Typography */
 body        { font-size: 12pt; font-family: verdana, sans-serif; }
@@ -42,3 +44,4 @@ h2          { font-weight: normal; }
 #trust      { font-size: 12pt; }
 #copy em    { font-style: normal; }
 .dialog input[type='text'] { padding: 5px; width: 15em; }
+.dialog form.error p  { font-weight: bold; }
