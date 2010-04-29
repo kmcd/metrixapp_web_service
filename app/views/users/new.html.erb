@@ -1,0 +1,38 @@
+<%# TODO: fix z-index issue and nest dialog inside modal div -%>
+<div class='modal'>
+</div>
+
+<div class='dialog'>
+   <h3>Sign up for 30-day free trial</h3>
+   
+   <p>
+      You have full use for 30 days with no obligation to buy. After that 
+      it&apos;s $9 per month.</p>
+   
+   <% form_for @user do |user_form| -%>
+      <fieldset class="<%= error_css_for @user, :email %>">
+         <label>
+            Email 
+            <%= error_message_for @user, :email %>
+         </label>
+         <%= user_form.text_field :email %>
+      </fieldset>
+      
+      <fieldset class="<%= error_css_for @user, :password %>">
+         <label>
+            Password 
+            <%= error_message_for @user, :password %>
+         </label>
+         <%= user_form.password_field :password %>
+      </fieldset>
+      
+      <fieldset class="<%= error_css_for @user, :password_confirmation %>">
+         <label>
+            Enter your password again to confirm
+         </label>
+         <%= user_form.password_field :password_confirmation %>
+      </fieldset>
+      
+      <button>Sign up</button> or <%= link_to 'Cancel', root_path %>
+   <% end -%>
+</div>
