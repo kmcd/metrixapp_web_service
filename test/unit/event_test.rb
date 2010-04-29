@@ -21,13 +21,10 @@ end
 class EventDateRangeFindTest < ActiveSupport::TestCase
   test "should find this month by default" do
     assert_equal 0, Event.count
-    assert_equal [], Event.find_in_date_range
+    assert_equal [], Event.grouped_by_date_name
     
     event = Event.create :created_at => 1.day.ago
-    assert_equal [event], Event.find_in_date_range
-  end
-  
-  test "should group by date and name" do
+    assert_equal [event], Event.grouped_by_date_name
   end
   
   # TODO: test boundary conditions, eg midnight, year start/end

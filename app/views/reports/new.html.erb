@@ -7,14 +7,14 @@
       </p>
       
       <p>
-         To view your dashboard graph, please ensure that:
+         To view your dashboard graph, please ensure that
       </p>
       
       <ol>
          <li>you added your tracking code</li>
-         <li>you added at least one event to your web page</li>
-         <li>you deployed your web page to production</li>
-         <li>someone has triggered the event, e.g. successfull signup.</li>
+         <li>there&apos;s at least one event on your web page</li>
+         <li>your application is deployed to production</li>
+         <li>someone has triggered the event, e.g. successfull signup</li>
       </ol>
    </div>
 <% else -%>
@@ -47,14 +47,14 @@
    e.g. on your "Thanks for signing up page", simply add:
 </p>
 
-<pre>&lt;script type='text/javascript'&gt; metrix.log("Signup") &lt;/script&gt;</pre>
+<pre>&lt;script type='text/javascript'&gt; metrix.log("Signup"); &lt;/script&gt;</pre>
 
 <p>
    You can pass in JSON data too. You&apos;ll have to download your data in CSV 
    to slice and dice any arbitrary data you send to us.
 </p>
 
-<pre>metrix.log("Signup", {'username':'bob', 'email':'bob@example.org'})</pre>
+<pre>metrix.log("Signup", {'username':'bob', 'email':'bob@example.org'});</pre>
 
 <h1>Deploy your web page to production</h1>
 <p>
@@ -69,6 +69,8 @@
 
 <pre>
    &lt;% if RAILS_ENV == 'production' %&gt;
-      metrix.log("Upgrade", {'account':'premu' , 'email':'bob@example.org'})
+      metrix.log("Upgrade");
    &lt;% end -%&gt;
 </pre>
+
+
