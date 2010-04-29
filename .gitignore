@@ -9,6 +9,7 @@ tmp/**/*
 .DS_Store
 db/cstore/**
 db/sphinx/**
+db/*.sql
 doc/api
 doc/app
 doc/plugins
