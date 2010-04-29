@@ -1,8 +1,10 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+  test "sets up account on signup" do
+    @user = User.new
+    @user.save false
+    
+    assert_kind_of Account, @user.account
   end
 end
