@@ -1,16 +1,21 @@
 <% if current_user.blank_slate? -%>
    <div class='blank_slate'>
-      <h1>We haven&apos;t recieved any data from your application yet</h1> 
+      <h1>Thanks for signing up &mdash; only 5 mins to go &hellip;</h1>
+      
       <p>
-         To view your first report, please ensure that:
-         
-         <ol>
-            <li>you added your tracking code</li>
-            <li>you added at least one event to your web page</li>
-            <li>you deployed your web page to production</li>
-            <li>someone has triggered the event, e.g. successfull signup.</li>
-         </ol>
+         We haven&apos;t received any data from your application yet. 
       </p>
+      
+      <p>
+         To view your dashboard graph, please ensure that:
+      </p>
+      
+      <ol>
+         <li>you added your tracking code</li>
+         <li>you added at least one event to your web page</li>
+         <li>you deployed your web page to production</li>
+         <li>someone has triggered the event, e.g. successfull signup.</li>
+      </ol>
    </div>
 <% else -%>
    <ol id='nav'>
@@ -23,8 +28,8 @@
 <h1>Add your tracking code</h1>
 
 <p>
-   Copy this tracking code EXACTLY and paste it just before the closing body tag 
-   (&lt;/body&gt;).
+   Copy this tracking code EXACTLY and paste just before 
+   the closing body tag (&lt;/body&gt;) of your web page.
 </p>
 
 <pre>
