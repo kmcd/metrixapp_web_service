@@ -7,14 +7,14 @@
       </p>
       
       <p>
-         To view your dashboard graph, please ensure that
+         To view your dashboard graph, you have to
       </p>
       
       <ol>
-         <li>you added your tracking code</li>
-         <li>there&apos;s at least one event on your web page</li>
-         <li>your application is deployed to production</li>
-         <li>someone has triggered the event, e.g. successfull signup</li>
+         <li>Add the tracking code to your application</li>
+         <li>Create at least one event on your web page</li>
+         <li>Deploy your application to production</li>
+         <li>Trigger the event in production, e.g. a successfull signup</li>
       </ol>
    </div>
 <% else -%>
@@ -37,7 +37,7 @@
    var protocol = (('https:' == document.location.protocol) ? 'https://' : 'http://'); 
    document.write(unescape('%3Cscript src="' + protocol + 'www.metrixapp.com/metrix.js" type="text/javascript"%3E%3C/script%3E')); 
 &lt;/script&gt;
-&lt;script type='text/javascript'&gt; try {  var metrix = new MetrixApp('d40463cd5ac4109abba69ececb5a48e9'); } catch(err) {} &lt;/script&gt;</pre>
+&lt;script type='text/javascript'&gt; try {  var metrix = new MetrixApp('<%= current_user.account.code %>'); } catch(err) {} &lt;/script&gt;</pre>
 </pre>
 
 <h1>Log your events</h1>

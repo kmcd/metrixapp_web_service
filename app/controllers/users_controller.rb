@@ -9,16 +9,10 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     
     if @user.save
-      login_with params[:user]
+      UserSession.create @user, true
       redirect_to new_report_path
     else  
       render :action => 'new'
     end
-  end
-  
-  private
-  
-  def login_with(user)
-    UserSession.create :username => user[:username], :password => user[:password]
   end
 end
