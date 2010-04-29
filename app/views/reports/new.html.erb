@@ -1,0 +1,69 @@
+<% if current_user.blank_slate? -%>
+   <div class='blank_slate'>
+      <h1>We haven&apos;t recieved any data from your application yet</h1> 
+      <p>
+         To view your first report, please ensure that:
+         
+         <ol>
+            <li>you added your tracking code</li>
+            <li>you added at least one event to your web page</li>
+            <li>you deployed your web page to production</li>
+            <li>someone has triggered the event, e.g. successfull signup.</li>
+         </ol>
+      </p>
+   </div>
+<% else -%>
+   <ol id='nav'>
+      <li>
+         <%= link_to 'Back to your dashboard', reports_path %>
+      </li>
+   </ol>
+<% end -%>
+
+<h1>Add your tracking code</h1>
+
+<p>
+   Copy this tracking code EXACTLY and paste it just before the closing body tag 
+   (&lt;/body&gt;).
+</p>
+
+<pre>
+&lt;script type='text/javascript'&gt; 
+   var protocol = (('https:' == document.location.protocol) ? 'https://' : 'http://'); 
+   document.write(unescape('%3Cscript src="' + protocol + 'www.metrixapp.com/metrix.js" type="text/javascript"%3E%3C/script%3E')); 
+&lt;/script&gt;
+&lt;script type='text/javascript'&gt; try {  var metrix = new MetrixApp('d40463cd5ac4109abba69ececb5a48e9'); } catch(err) {} &lt;/script&gt;</pre>
+</pre>
+
+<h1>Log your events</h1>
+
+<p>
+   Once you&apos;ve added the tracking code you can easily log events.
+   e.g. on your "Thanks for signing up page", simply add:
+</p>
+
+<pre>&lt;script type='text/javascript'&gt; metrix.log("Signup") &lt;/script&gt;</pre>
+
+<p>
+   You can pass in JSON data too. You&apos;ll have to download your data in CSV 
+   to slice and dice any arbitrary data you send to us.
+</p>
+
+<pre>metrix.log("Signup", {'username':'bob', 'email':'bob@example.org'})</pre>
+
+<h1>Deploy your web page to production</h1>
+<p>
+   You must send us the data before you can view it, so you&apos;ll have to 
+   deploy to production.
+</p>
+
+<p>
+   To prevent logging from your development envrironment, add a gaurd around your
+   javascript logging. e.g. in a Rails application:
+</p>
+
+<pre>
+   &lt;% if RAILS_ENV == 'production' %&gt;
+      metrix.log("Upgrade", {'account':'premu' , 'email':'bob@example.org'})
+   &lt;% end -%&gt;
+</pre>

@@ -1,14 +1,27 @@
 /* Typogrpahy */
-body { font-family: arial, verdana, sans-serif; font-size: 10pt; }
+body { font-family: verdana, sans-serif; font-size: 10pt; }
 #nav { list-style-type: none; }
 #nav a { text-decoration: none; }
 #nav a:hover { text-decoration: underline; }
 
+.reports.new h1 { font-weight: normal; }
+.reports.new pre { font-family: "andale mono", "courier new", courier, monospace; }
+
 /* Color */
+.reports.new { color: gray; }
+.reports.new pre { color: black; }
+.reports.new h1 { color: gainsboro; border-bottom: thin dotted silver; }
+.reports.new .blank_slate { background-color: rgb(255, 255, 175); color: black; }
+.reports.new .blank_slate h1 { color: black; border: none; }
 
 /* Layout */
 body { margin: 1em auto;  width: 800px; }
 #chart { width: 800px; height: 500px;  }
-
 #nav { margin: 0; padding: 0; text-align: right; }
 #nav li { display: inline; padding-right: 1em;  }
+
+.reports.new pre { padding-left: 1.6em; }
+.reports.new h1 { margin-top: 1.6em; }
+.reports.new p { width: 80%; }
+.reports.new .blank_slate { padding: 0.6em 1.6em; margin-top: 4em; }
+.reports.new .blank_slate h1 { margin: 0; }

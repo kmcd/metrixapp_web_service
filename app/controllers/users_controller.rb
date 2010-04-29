@@ -8,11 +8,17 @@ class UsersController < ApplicationController
   def create  
     @user = User.new(params[:user])
     
-    if @user.save  
-      flash[:notice] = "Registration successful."  
-      redirect_to root_url  
+    if @user.save
+      login_with params[:user]
+      redirect_to new_report_path
     else  
-      render :action => 'new'  
+      render :action => 'new'
     end
+  end
+  
+  private
+  
+  def login_with(user)
+    UserSession.create :username => user[:username], :password => user[:password]
   end
 end
