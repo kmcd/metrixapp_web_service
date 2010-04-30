@@ -4,7 +4,7 @@ require(File.dirname(__FILE__) + "/../../config/environment") unless defined?(Ra
 class Log
   def self.call(env)
     if env["PATH_INFO"] =~ /^\/log/
-      Event.create_from_log env["QUERY_STRING"]
+      Event.create_from_log Rack::Request.new(env).params
       [200, {"Content-Type" => "text/html"}, [""]]
     else
       [404, {"Content-Type" => "text/html"}, ["Not Found"]]

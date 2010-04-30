@@ -8,10 +8,8 @@ class Event < ActiveRecord::Base
       :order => 'date(created_at)' }
   }
     
-  def self.create_from_log(query_string)
-    account_code = query_string[/account_code=([A-Za-z0-9]{32})/,1]
-    name = query_string[/&name=(.*)&/,1]
-    data = query_string[/&data=(.*)/,1]
-    create :account_code => account_code, :name => name, :data => data
+  def self.create_from_log(params)
+    create :account_code => params['account_code'], 
+      :name =>params['name'], :data => params['data']
   end
 end

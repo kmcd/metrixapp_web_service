@@ -38,13 +38,11 @@ end
 
 class EventCreateFromLogTest < ActiveSupport::TestCase
   test "should create an event from a log request" do
-    account_code = "57577942568b4bbdbc578bbec30e0bfd"
-    name = "Signup"
-    data = "undefined"
-    event = Event.create_from_log "account_code=#{account_code}&name=#{name}&data=#{data}"
+    params =  {"name"=>"Signup", "data"=>"undefined", "account_code"=>"cc8e0c9e1b1aa9e12e55ea48edc67b44"}
+    event = Event.create_from_log params
     
-    assert_equal account_code, event.account_code
-    assert_equal name, event.name
-    assert_equal data, event.data
+    assert_equal params['account_code'], event.account_code
+    assert_equal params['name'], event.name
+    assert_equal params['data'], event.data
   end
 end
