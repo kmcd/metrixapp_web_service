@@ -12,4 +12,9 @@ class Event < ActiveRecord::Base
     create :account_code => params['account_code'], 
       :name =>params['name'], :data => params['data']
   end
+  
+  def self.csv_for(account_code)
+    find(:all, :conditions => { :account_code => account_code } ).
+      to_csv(:only => [:created_at, :name, :data])
+  end
 end

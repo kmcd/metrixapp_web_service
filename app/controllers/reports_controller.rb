@@ -15,7 +15,11 @@ class ReportsController < ApplicationController
       # Load amstock_settings (maybe this should not be publicly available)
       format.xml { setup_graph_data } 
       
-      format.csv { Event.all.to_csv(:only => [:created_at, :name, :data]) }
+      format.csv do
+        send_data Event.csv_for(current_user.account_code),
+          :type => 'text/csv; charset=iso-8859-1; header=present',
+          :disposition => "attachment; filename=reports.csv"
+      end
     end
   end
   
