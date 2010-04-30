@@ -4,7 +4,9 @@ class User < ActiveRecord::Base
   before_create :create_signup_account
   
   def blank_slate?
-    true
+    return true unless account
+    not Event.exists? :account_code => account.code
+    # OPTIMIZE: cache this as it's loaded on each graph request
   end
   
   protected
