@@ -13,7 +13,7 @@ class Account < ActiveRecord::Base
   end
   
   def unique_code
-    code = SecureRandom.hex
+    code = ActiveSupport::SecureRandom.hex
     Account.exists?(:code => code) ? unique_code : code
   end
 end
