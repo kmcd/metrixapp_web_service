@@ -4,11 +4,20 @@
    <li>
       <%= link_to 'Add event', new_report_path %>
    </li>
+   <li>
+      <%= link_to 'Download CSV', reports_path(:format => :csv) %>
+   </li>
 </ol>
 
 <div id="chart">
    <p>You need to upgrade your Flash Player</p>
 </div>
+
+<p class='hint'>
+   Hint: hover your mouse over the graph. You can drag the diamonds on the 
+   bottom left and right to change the time scale. Also, hover over the plot
+   line for for daily totals.
+</p>
 
 <script type="text/javascript">
 // <![CDATA[		
