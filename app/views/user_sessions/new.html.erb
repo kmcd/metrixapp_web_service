@@ -1,2 +1,27 @@
-<h1>UserSessions#new</h1>
-<p>Find me in app/views/user_sessions/new.html.erb</p>
+<div class='modal'>
+</div>
+
+<div class='dialog'>
+   <h3>Log in to your account</h3>
+   
+   <% if flash[:error] -%>
+      <p class='error'>
+         Sorry, we can&apos;t find that email &amp; password.
+         Please try again.
+      </p>
+   <% end -%>
+   
+   <% form_for @user_session do |user_form| -%>
+      <fieldset>
+         <label>Email</label>
+         <%= user_form.text_field :email %>
+      </fieldset>
+      
+      <fieldset>
+         <label>Password</label>
+         <%= user_form.password_field :password %>
+      </fieldset>
+      
+      <button>Log in</button>
+   <% end -%>
+</div>

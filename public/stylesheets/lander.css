@@ -43,10 +43,10 @@ table.contact caption
 .dialog        { position: fixed; top: 19%; left: 28%; width: 38.8%; }
 .dialog > *    { padding-left: 9%; }
 .dialog h3     { padding: 0.6em; padding-left: 9%; }
-.dialog form   { padding: 0 0 1.6em 0;}
+.dialog form   { padding: 0 0 1.6em 0; }
 .dialog form fieldset { padding: 1em 9%; margin: 0; }
 .dialog form button  { margin: 1em 0 0 9%; }
 
 .dialog input[type='text'], .dialog input[type='password'] { padding: 5px; display: block; }
 .dialog label  { display: block; }
-
+.dialog p.error { padding: 1em 9%; }
