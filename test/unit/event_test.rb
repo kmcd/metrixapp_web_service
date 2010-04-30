@@ -25,10 +25,10 @@ end
 class EventGraphFinderTest < ActiveSupport::TestCase
   test "should find by account code" do
     account_code, name = 'abc', 'signup'
-    assert_equal [], Event.grouped_by_date_name(account_code)
+    assert_equal [], Event.graph_data_for(account_code)
     
     Event.create :account_code => account_code, :name => name
-    events = Event.grouped_by_date_name(account_code)
+    events = Event.graph_data_for(account_code)
     assert_equal 1, events.size
     assert_equal name, events.first.name
   end

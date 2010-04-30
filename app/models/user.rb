@@ -9,6 +9,11 @@ class User < ActiveRecord::Base
     # OPTIMIZE: cache this as it's loaded on each graph request
   end
   
+  def account_code
+    return unless account
+    @account_code ||= account.code
+  end
+  
   protected
   
   def create_signup_account

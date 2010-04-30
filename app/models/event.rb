@@ -1,7 +1,7 @@
 class Event < ActiveRecord::Base
   validates_presence_of :name, :account_code
   
-  named_scope :grouped_by_date_name, lambda {|account_code|
+  named_scope :graph_data_for, lambda {|account_code|
     { :conditions => { :account_code => account_code },
       :select => 'date(created_at), name, count(created_at)', 
       :group => 'date(created_at), name',

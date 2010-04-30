@@ -1,6 +1,7 @@
 namespace :db do
   desc 'Create 1/2/4 weeks worth of sample data'
   task :populate => :environment do
+    User.destroy_all
     Event.destroy_all
     
     # This week
@@ -35,6 +36,16 @@ end
 def create_event(records, name, created_at)
   # TODO: randomise each day slightly, say +/- 10%
   records.times do
-    Event.create! :name => name, :created_at => created_at.days.ago
+    Event.create! :name => name, :created_at => created_at.days.ago, 
+      :account_code => account_code
   end
+end
+
+def account_code
+  @account_code ||= user.account.code
+end
+
+def user
+  @user ||= User.create :email => 'kmcd@example.org', :password => 'password',
+    :password_confirmation => 'password'
 end
