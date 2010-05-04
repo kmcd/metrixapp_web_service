@@ -8,3 +8,14 @@ Feedback from
    Google ad campaigns
    Lean startup circle
    User testing
+   
+Improvements
+   /login & signup routes
+   Tests for signup
+   Tests for login
+   Auto-test live site
+   Improve test coverage
+   
+Features
+   real time data
+   
