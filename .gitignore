@@ -18,4 +18,5 @@ coverage/*
 db/*.sqlite3
 *.tmproj
 *.sw?
-tmp/
+tmp/*
+log/*
