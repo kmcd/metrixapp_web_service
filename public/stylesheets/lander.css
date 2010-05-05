@@ -41,8 +41,8 @@ table.contact  { width: 61.2%; border-collapse: collapse; }
 table.contact caption
                { text-align: left; margin-bottom: 0.6em; }
 .modal         { position: fixed; top: 0; left: 0; width: 100%; height: 100%; }
-.dialog        { position: fixed; top: 19%; left: 28%; width: 38.8%; }
-.dialog > *    { padding-left: 9%; }
+.dialog        { position: fixed; top: 9%; left: 28%; width: 38.8%; }
+.dialog > *    { padding-left: 9%; padding-right: 0.6em; }
 .dialog h3     { padding: 0.6em; padding-left: 9%; }
 .dialog form   { padding: 0 0 1.6em 0; }
 .dialog form fieldset { padding: 1em 9%; margin: 0; }
