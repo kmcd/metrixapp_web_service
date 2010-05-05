@@ -1,3 +1,19 @@
+Bugs
+   /signup modal dialog needs right spacing
+
+Improvements to exisiting features
+   % changes for metrix
+   /login & signup routes
+   real time data
+   Tests for signup / login / creating events
+   auto-test live site
+   track unique visitors with a cookie
+   3 step image (script/deploy/dashboard)
+   
+New features
+   identify visitor with an id/token
+   Rest client event creation
+   
 Feedback from
    Nahtaniel Talbott
    Dave McClure
@@ -8,14 +24,3 @@ Feedback from
    Google ad campaigns
    Lean startup circle
    User testing
-   
-Improvements
-   /login & signup routes
-   Tests for signup
-   Tests for login
-   Auto-test live site
-   Improve test coverage
-   
-Features
-   real time data
-   

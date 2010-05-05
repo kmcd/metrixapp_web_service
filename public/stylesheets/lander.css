@@ -8,6 +8,7 @@ h1,em          { color: black; }
 .dialog .error   { background-color: mistyrose; }
 .dialog.success h3 { background-color: PaleGreen; }
 .dialog form fieldset { border: none; }
+dd.benefit { background: url('../images/tick.png') no-repeat 0% 10%; }
    
 /* Typography */
 body        { font-size: 12pt; font-family: verdana, sans-serif; }
@@ -30,13 +31,13 @@ h1,h2          { margin: 0; }
 #tagline       { margin-bottom: 0.6em; }
 #call2action   { font-size: 1.6em; }
 #copy          { width: 48%; float:left; }
-#screenshots   { width: 48%; float:right;  }
-#screenshots img { margin: 1.6em; }
+#screenshots   { width: 48%; float:right; }
+#screenshots img { margin: 1.6em 2.4em; }
 #trust         { clear: both; padding: 1em 1%; }
 dt             { margin-bottom: 0.6em; }
 dd             { margin-bottom: 1em; }
 dd ol          { padding-left: 1em; }
-table.contact  { width: 48%; border-collapse: collapse; }
+table.contact  { width: 61.2%; border-collapse: collapse; }
 table.contact caption
                { text-align: left; margin-bottom: 0.6em; }
 .modal         { position: fixed; top: 0; left: 0; width: 100%; height: 100%; }
@@ -50,3 +51,4 @@ table.contact caption
 .dialog input[type='text'], .dialog input[type='password'] { padding: 5px; display: block; }
 .dialog label  { display: block; }
 .dialog p.error { padding: 1em 9%; }
+dd.benefit { padding-left: 1.6em; margin: 1em 0.6em; }

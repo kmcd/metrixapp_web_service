@@ -1,50 +1,82 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-   <title>MetrixApp: website sales conversion dashboard</title>
+   <title>MetrixApp: the easiest way to measure web site usage</title>
    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
    <%= stylesheet_link_tag 'lander' %>
 </head>
 <body>
-   <h1 id='headline'>Website sales conversion dashboard</h1>
-   <h2 id='tagline'>Who's staying, paying or leaving your online business ?</h2>
+   <h1 id='headline'>MetricsApp</h1>
+   <h2 id='tagline'>The easiest way to measure your web site usage</h2>
    
    <div id='copy'>
       <p>
-         Record your web sites monetisation events and make informed business decisions.
+         Struggling to get meaningful &amp; actionable metrics from your analytics tools ?
       </p>
-      
+   
       <p>
-         Simply copy a javascript code into your web page, then view your bottom line in real time.
+         MetrixApp is a dead simple custom analytics service. Simply add javascript to your web page and we&apos;ll do the rest.
       </p>
       
-      <% link_to(new_user_path, :id => 'call2action') do %>
+      <% link_to(signup_path, :id => 'call2action') do %>
          Free 30-day trial &mdash; Sign up in 60 seconds
       <% end %>
       
       <p>
-         If you&apos;ve already signed up you can <%= link_to 'login here', new_user_session_path %>.
+         If you&apos;ve already signed up you can <%= link_to 'login here', login_path %>.
       </p>
       
       <%= yield %>
       
       <dl>
-         <dt>How much does it cost?</dt>
-         <dd><em>Free for 30 days</em> then <em>$9 per month</em>.</dd>
+         <dt>How much does it cost ?</dt>
+         <dd>
+            <em>Free for 30 days</em> then <em>$9 per month</em>.
+         </dd>
+         <dd>
+            We don&apos;t charge non-profit organisations. Send an email to <%= mail_to contact_email %> for a free lifetime account.
+         </dd>
          
-         <dt>How do I get started?</dt>
+         <dt>How do you get started ?</dt>
          <dd>
             <ol>
+               <li><%= link_to 'Sign up for a new account', signup_path %></li>
                <li>Add javascript tracking code to relevant pages</li>
-               <li>Deploy your code to production</li>
-               <li>Monitor your real time dashboard</li>
+               <li>Deploy your website to production</li>
             </ol>
+         </dd>
+         
+         <dt>What are the features ?</dt>
+         
+         <dd class='benefit'>
+            <em>Easy to setup.</em> 
+            You&apos;ll be up &amp; running in under 5 mins.
+         </dd>
+         
+         <dd class='benefit'>
+            <em>Easy to use.</em> 
+            You get a custom dashboard easily understandable by managers and techies. You don&apos;t have to wade through pages of meaningless reports to get the data you need. 
+         </dd>
+         
+         <dd class='benefit'>
+            <em>Easy to customise.</em>
+            Create only the data you need with custom javascritp events.
+         </dd>
+         
+         <dd class='benefit'>
+            <em>Custom reports with Excel.</em>
+            Export all your data to CSV and generate custom reports with your favourite spreadsheet.
+         </dd>
+         
+         <dd class='benefit'>
+            <em>Low cost.</em> 
+            Only $9 per month with unlimited user accounts and data. Save time and money by NOT building and maintainng your own custom reporting code and infrastrcuture.
          </dd>
       </dl>
    </div>
    
    <div id='screenshots'>
-      <img alt="dashboard" src="/images/data_page_2.png">
+      <img alt="dashboard" src="/images/data_page.png">
    </div>
    
    <div id='trust'>
@@ -66,6 +98,10 @@
             <td>keithmmcdonnell</td>
          </tr>
       </table>
+      
+      <p>DancingText Ltd., Unit 36, 88 - 90 Hatton Garden, London EC1 8PN, UK.  </p>
+      
+      <p>&copy; DancingText Ltd. <%= Date.today.year %>.</p>
    </div>
    
    <%= render :partial => 'shared/google_analytics' -%>

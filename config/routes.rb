@@ -5,6 +5,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
   map.resources :user_sessions
   map.login 'login', :controller => 'user_sessions', :action => 'new'
+  map.signup 'signup', :controller => 'users', :action => 'new'
   
   # Landing (SEO) page
   map.resources :leads
