@@ -11,6 +11,7 @@ Improvements to exisiting features
    3 step image (script/deploy/dashboard)
    handle https requests for metrix.js
    minify metrix.js
+   Add to documentation: how to make a http call
    
 New features
    identify visitor with an id/token
