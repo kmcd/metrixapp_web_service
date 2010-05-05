@@ -5,6 +5,20 @@ module ApplicationHelper
   end
   
   def google_analytics
-    render :partial => 'shared/google_analytics' if RAILS_ENV == 'production'
+    production_only { render :partial => 'shared/google_analytics' }
+  end
+  
+  def metrixapp_snippet
+    production_only { render :partial => 'shared/metrixapp_snippet' }
+  end
+  
+  def metrixapp_log(message)
+    production_only { javascript_tag "metrix.log('#{message}');", :defer => 'defer' }
+  end
+  
+  private
+  
+  def production_only
+    yield unless RAILS_ENV == 'production'
   end
 end

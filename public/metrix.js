@@ -7,11 +7,6 @@ var MetrixApp = function (account_code) {
       event_data = 'account_code=' + account_code + '&name=' + name + '&data=' + JSON.stringify(data);
       image.src = 'http://www.metrixapp.com/log?' + event_data ;
    };
-   
-   // TODO: encode JSON
-   // TODO: handle https requests
-   // TODO: Uniquely identify user with cookie
-   // TODO: Uniquely identify user with user identifier
 };
 
 // Create a JSON object only if one does not already exist. We create the

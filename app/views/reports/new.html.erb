@@ -17,12 +17,17 @@
          <li>Trigger the event in production, e.g. a successfull signup</li>
       </ol>
    </div>
+   
+   <%= metrixapp_log "Signup" if session[:signup] %>
+   <%= metrixapp_log "Blank slate" %>
 <% else -%>
    <ol id='nav'>
       <li>
          <%= link_to 'Your dashboard', reports_path %>
       </li>
    </ol>
+   
+   <%= metrixapp_log "New event" %>
 <% end -%>
 
 <h1>Add your tracking code</h1>
@@ -72,5 +77,3 @@
       metrix.log("Upgrade");
    &lt;% end -%&gt;
 </pre>
-
-

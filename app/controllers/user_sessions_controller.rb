@@ -9,7 +9,7 @@ class UserSessionsController < ApplicationController
     @user_session = UserSession.new(params[:user_session])
     
     if @user_session.save
-      redirect_to new_report_path
+      redirect_to reports_path
     else
       flash[:error] = true
       render :action => 'new'  

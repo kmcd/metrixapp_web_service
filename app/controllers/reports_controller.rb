@@ -6,7 +6,6 @@ class ReportsController < ApplicationController
   
   def index
     respond_to do |format|
-      
       format.html do
         redirect_to new_report_path if current_user.blank_slate?
         setup_graph_data

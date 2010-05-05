@@ -3,9 +3,9 @@ class Event < ActiveRecord::Base
   
   named_scope :graph_data_for, lambda {|account_code|
     { :conditions => { :account_code => account_code },
-      :select => 'date(created_at), name, count(created_at)', 
+      :select => 'date(created_at), name, count(created_at)',
       :group => 'date(created_at), name',
-      :order => 'date(created_at)' }
+      :order => 'date(created_at), name' }
   }
     
   def self.create_from_log(params)
