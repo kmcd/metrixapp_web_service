@@ -1,14 +1,17 @@
 ActionController::Routing::Routes.draw do |map|
+  # The app
   map.resources :reports
   
   # Authentication
   map.resources :users
   map.resources :user_sessions
-  map.login 'login', :controller => 'user_sessions', :action => 'new'
-  map.signup 'signup', :controller => 'users', :action => 'new'
   
   # Landing (SEO) page
   map.resources :leads
+  
+  map.signup '/signup', :controller => 'users', :action => 'new'
+  map.login '/login', :controller => "user_sessions", :action => "new"
+  
   map.root :controller => "leads", :action => "lander"
   
   # See how all your routes lay out with "rake routes"

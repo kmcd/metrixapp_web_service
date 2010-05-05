@@ -1,7 +1,7 @@
 class UserSessionsController < ApplicationController
   layout 'landing_page'
   
-  def new  
+  def new
     @user_session = UserSession.new
   end  
   
