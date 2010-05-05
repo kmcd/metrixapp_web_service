@@ -19,6 +19,6 @@ module ApplicationHelper
   private
   
   def production_only
-    yield unless RAILS_ENV == 'production'
+    yield if RAILS_ENV == 'production'
   end
 end
