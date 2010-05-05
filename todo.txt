@@ -1,5 +1,5 @@
 Bugs
-   Chart can't handle arbitrary events; pad out chart data csv with empty values
+   Chart does not pad out empty days - merely skips to the next avialable date
    /reports should have totals for entire period
    
 Improvements to exisiting features

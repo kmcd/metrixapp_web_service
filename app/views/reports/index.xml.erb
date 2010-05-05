@@ -12,29 +12,37 @@
       </letters>      
    </number_format>
    <data_sets> 
-    <data_set did="0">
+      <data_set did="0">
       <csv>
          <reverse>false</reverse>
          <separator>,</separator>
          <date_format>YYYY-MM-DD</date_format>
          <decimal_separator>.</decimal_separator>
          
-         <% events = @events.group_by(&:date).map {|eg| [eg.first, eg.last.map(&:count)].flatten  } -%>
          <columns>
             <column>date</column>
             
-            <%# TODO: set columns based on event names; how to handle empty data columns? -%>
-            <column>c0</column>
-            <column>c1</column>
-            <column>c2</column>
-            <column>c3</column>
-            <column>c4</column>
+            <% events_by_name = @events.group_by(&:name) -%>
+            <% events_by_name.keys.each_with_index do |key,index| -%>
+               <column>c<%= index.to_s %></column>
+            <% end -%>
          </columns>
          
-         <%# TODO: move this to a model: CsvBuilder.new(@events).to_csv -%>
+         <% # TODO: refactor this to model
+            events = @events.group_by(&:date).map do |eg|
+               date = eg.first
+               counts = []
+               events_by_name.keys.each do |name|
+                  event = eg.last.find {|e| e.name == name }
+                  counts << [ event && event.count || 0 ]
+               end
+               [date, counts].flatten
+            end
+         -%>
+         
          <data><%= events.inject("") {|csv,event| csv << event.join(',') + "\n"  } -%></data>
-       </csv>
-    </data_set>
+      </csv>
+      </data_set>
    </data_sets>
   
    <charts>
@@ -83,7 +91,7 @@
    </charts>
   
    <data_set_selector>
-    <enabled>false</enabled>
+      <enabled>false</enabled>
    </data_set_selector>
    
    <period_selector>
