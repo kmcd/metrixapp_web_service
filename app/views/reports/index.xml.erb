@@ -29,15 +29,25 @@
          </columns>
          
          <% # TODO: refactor this to model
-            events = @events.group_by(&:date).map do |eg|
+            events_by_date = @events.group_by(&:date)
+            events = events_by_date.map do |eg|
                date = eg.first
                counts = []
                events_by_name.keys.each do |name|
                   event = eg.last.find {|e| e.name == name }
-                  counts << [ event && event.count || 0 ]
+                  counts << [ event && event.count || 0 ] # pad out empty events
                end
                [date, counts].flatten
             end
+            
+            dates = events_by_date.keys.map(&:to_date)
+            (dates.first..dates.last).entries.each do |date|
+               unless events_by_date.keys.include? date.to_s
+                  events << [ date.to_s, events_by_name.keys.map {|e| 0 } ].flatten
+               end
+            end
+            
+            events = events.sort_by {|e| e.first }
          -%>
          
          <data><%= events.inject("") {|csv,event| csv << event.join(',') + "\n"  } -%></data>
