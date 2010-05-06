@@ -1,11 +1,12 @@
 Bugs
    Chart does not pad out empty days - merely skips to the next avialable date
-   /reports should have totals for entire period
+   Chart empty with one event
    
 Improvements to exisiting features
    % changes for metrix
    real time data
    Tests for signup / login / creating events
+   /reports should have totals for entire period
    auto-test live site
    track unique visitors with a cookie
    3 step image (script/deploy/dashboard)
