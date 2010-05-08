@@ -1,6 +1,6 @@
 /* Color */
 body           { color: gray; }
-#trust         {  background-color: whitesmoke; }
+#trust         { background-color: whitesmoke; }
 h1,h3,em       { color: black; }
 .modal         { background-color: whitesmoke;  opacity: 0.8; z-index: 10; }
 .dialog        { opacity: 0.9; border: thin outset gray; background-color: white; color: black; z-index: 20; }
@@ -40,7 +40,7 @@ h2             { padding-bottom: 1em; }
 #screenshots > * { margin: 0; padding: 0;  }
 #screenshots ol li { margin-top: 1.6em; }
 
-#trust         { clear: both; padding: 1em 1%; }
+#trust         { clear: both; padding: 1em 1%; margin-top: 4em; }
 dt             { margin-bottom: 0.6em; }
 dd             { margin-bottom: 1em; }
 dd ol          { padding-left: 1em; }
