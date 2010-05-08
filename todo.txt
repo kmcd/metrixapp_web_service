@@ -8,6 +8,9 @@ Housekeeping
    remove all todo comments
    
 Improvements to exisiting features
+   Add documentation to explain how to make an API call
+   Add browser frame to how it works section on landing page
+
    When only a few (or one) days data exists, 
       pad out date range to one week 
       maybe have minute by minute data instead

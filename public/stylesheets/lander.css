@@ -1,7 +1,7 @@
 /* Color */
 body           { color: gray; }
 #trust         {  background-color: whitesmoke; }
-h1,em          { color: black; }
+h1,h3,em       { color: black; }
 .modal         { background-color: whitesmoke;  opacity: 0.8; z-index: 10; }
 .dialog        { opacity: 0.9; border: thin outset gray; background-color: white; color: black; z-index: 20; }
 .dialog h3     { margin: 0; background-color: AliceBlue; color: black; }
@@ -9,18 +9,21 @@ h1,em          { color: black; }
 .dialog.success h3 { background-color: PaleGreen; }
 .dialog form fieldset { border: none; }
 dd.benefit { background: url('../images/tick.png') no-repeat 0% 10%; }
-   
+#screenshots ol { font-style: italic; }
+#screenshots { border-left: thin dotted gray; }
+
 /* Typography */
 body        { font-size: 12pt; font-family: verdana, sans-serif; }
 h1, h2, #call2action, #trust, .dialog
             { font-family: helvetica, arial, sans-serif; }
-h1, h2      { letter-spacing:-2px; }
+h1,h2,h3      { letter-spacing:-1px; }
 h2          { font-weight: normal; }
 #headline   { font-size: 2.4em; }
 #tagline    { font-size: 1.6em; }
 #trust      { font-size: 12pt; }
 #copy em    { font-style: normal; }
 .dialog form.error p  { font-weight: bold; }
+#screenshots ol { list-style-type: none; }
 
 /* Layout */
 body           { min-width: 950px; margin: 0; }
@@ -28,11 +31,15 @@ body           { min-width: 950px; margin: 0; }
                { padding-left: 1%; }
 h1             { padding-top: 1%; }
 h1,h2          { margin: 0; }
+h2             { padding-bottom: 1em; }
 #tagline       { margin-bottom: 0.6em; }
 #call2action   { font-size: 1.6em; }
 #copy          { width: 48%; float:left; }
-#screenshots   { width: 48%; float:right; }
-#screenshots img { margin: 1.6em 2.4em; }
+#copy p:first-child {  margin-top: 0; }
+#screenshots   { width: 48%; float:right; padding-left: 1em; }
+#screenshots > * { margin: 0; padding: 0;  }
+#screenshots ol li { margin-top: 1.6em; }
+
 #trust         { clear: both; padding: 1em 1%; }
 dt             { margin-bottom: 0.6em; }
 dd             { margin-bottom: 1em; }

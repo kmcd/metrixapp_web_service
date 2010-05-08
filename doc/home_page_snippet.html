@@ -1,0 +1,17 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+   <script type='text/javascript'> 
+      var protocol = (('https:' == document.location.protocol) ? 'https://' : 'http://'); 
+      document.write(unescape('%3Cscript src="' + protocol + 'www.metrixapp.com/metrix.js" type="text/javascript"%3E%3C/script%3E')); 
+   </script>
+   <script type='text/javascript'> try {  var metrix = new MetrixApp('abc123'); } catch(err) {} </script>
+</head>
+<body>
+   <h1>Welcome to my site</h1>
+   
+   <script type="text/javascript">
+      metrix.log('Landing page');
+   </script>
+</body>
+</html>
