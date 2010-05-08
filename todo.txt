@@ -1,31 +1,42 @@
 Bugs
-   Chart does not pad out empty days - merely skips to the next avialable date
-   Chart empty with one event
+   
+Housekeeping
+   clean up routes (nice restful names)
+   minify metrix.js
+   Tests for signup / login / creating events
+   auto-test live site
+   remove all todo comments
    
 Improvements to exisiting features
+   When only a few (or one) days data exists, 
+      pad out date range to one week 
+      maybe have minute by minute data instead
+      only use whole numbers, half look crappy
+      
+   Pick most frequent data line for date scroller, otherwise plot line looks crap
+   Hint to turn on/off data lines
    % changes for metrix
-   real time data
-   Tests for signup / login / creating events
    /reports should have totals for entire period
-   auto-test live site
    track unique visitors with a cookie
    3 step image (script/deploy/dashboard)
    handle https requests for metrix.js
-   minify metrix.js
    Add to documentation: how to make a http call
    
 New features
+   up to the minute real time data
    identify visitor with an id/token
    Rest client event creation
    Rails helpers / plugin / engine
    
 Feedback from
-   Nahtaniel Talbott
+   Matt
+   Steve
+   Leancamp guys (phone call/email)
+   Google ad campaigns
+   User testing
+   Lean startup circle
+   Nathaniel Talbott
    Dave McClure
    Steve Blank
    Eric Reis
-   Matt
    Ash Maruya
-   Google ad campaigns
-   Lean startup circle
-   User testing
