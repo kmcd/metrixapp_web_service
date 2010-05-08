@@ -11,6 +11,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.signup '/signup', :controller => 'users', :action => 'new'
   map.login '/login', :controller => "user_sessions", :action => "new"
+  map.adwords '/lean-startup',:controller => "leads", :action => "lander"
   
   map.root :controller => "leads", :action => "lander"
   

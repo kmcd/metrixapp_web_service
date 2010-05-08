@@ -1,11 +1,11 @@
-lean startup
-customer development
-startup
-
-
-metrics
-conversion dashboard
-analytics
-sales funnel
-funnel analysis
-conversion funnel
+[lean startup]
+[customer development]
+[conversion dashboard]
+[startup analytics]
+[startup metrics]
+[sales funnel]
+[conversion funnel]
+[funnel analysis]
+[sales funnel]
+[customer discovery]
+[customer validation]
