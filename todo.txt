@@ -1,5 +1,6 @@
 Bugs
-   Remove destructive elements from populate task
+   Legend should display date range totals NOT todays data
+   Change call to action to "Signup in 10 seconds"
 
 Housekeeping
    Fix invalid account code on production a/c
@@ -9,6 +10,7 @@ Housekeeping
    auto-test live site
    clean up routes (nice restful names)
    remove all todo comments
+   data backup (heroku bundles)
    
 Improvements to exisiting features
    Add documentation to explain how to make an API call
@@ -33,6 +35,7 @@ New features
    identify visitor with an id/token
    Rest client event creation
    Rails helpers / plugin / engine
+   Rename your data points
    
 Feedback from
    Matt

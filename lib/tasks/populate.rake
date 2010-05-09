@@ -4,29 +4,26 @@ namespace :db do
     
     # This week
     (0..6).each do |days_previous|
-      create_event(100, 'Acquisition', days_previous)
-      create_event(18, 'Activation', days_previous)
-      create_event(1, 'Retention', days_previous)
-      create_event(6, 'Referral', days_previous)
-      create_event(8, 'Renewal', days_previous)
+      create_event(100, 'Viewed landing page', days_previous)
+      create_event(18, 'Signed up', days_previous)
+      create_event(1, 'Logged in', days_previous)
+      create_event(8, 'Upgrade to premium account', days_previous)
     end
     
     # Last week
     (7..14).each do |days_previous|
-      create_event(218, 'Acquisition', days_previous)
-      create_event(45, 'Activation', days_previous)
-      create_event(11, 'Retention', days_previous)
-      create_event(61, 'Referral', days_previous)
-      create_event(81, 'Renewal', days_previous)
+      create_event(218, 'Viewed landing page', days_previous)
+      create_event(45, 'Signed up', days_previous)
+      create_event(11, 'Logged in', days_previous)
+      create_event(81, 'Upgrade to premium account', days_previous)
     end
     
     # 3 & 4 weeks ago
     (15..30).each do |days_previous|
-      create_event(197, 'Acquisition', days_previous)
-      create_event(34, 'Activation', days_previous)
-      create_event(16, 'Retention', days_previous)
-      create_event(20, 'Referral', days_previous)
-      create_event(6, 'Renewal', days_previous)
+      create_event(197, 'Viewed landing page', days_previous)
+      create_event(34, 'Signed up', days_previous)
+      create_event(16, 'Logged in', days_previous)
+      create_event(6, 'Upgrade to premium account', days_previous)
     end
   end
 end
@@ -44,6 +41,6 @@ def account_code
 end
 
 def user
-  @user ||= User.create :email => 'kmcd@example.org', :password => 'password',
-    :password_confirmation => 'password'
+  @user ||= User.find_or_create_by_email :email => 'kmcd@example.org',
+    :password => 'password', :password_confirmation => 'password'
 end
