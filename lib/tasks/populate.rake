@@ -1,8 +1,6 @@
 namespace :db do
   desc 'Create 1/2/4 weeks worth of sample data'
   task :populate => :environment do
-    User.destroy_all
-    Event.destroy_all
     
     # This week
     (0..6).each do |days_previous|

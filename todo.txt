@@ -1,10 +1,13 @@
 Bugs
-   
+   Remove destructive elements from populate task
+
 Housekeeping
-   clean up routes (nice restful names)
-   minify metrix.js
+   Fix invalid account code on production a/c
+   named routes for all accounts, eg http://metrixapp.com/ac/1
    Tests for signup / login / creating events
+   minify metrix.js
    auto-test live site
+   clean up routes (nice restful names)
    remove all todo comments
    
 Improvements to exisiting features
