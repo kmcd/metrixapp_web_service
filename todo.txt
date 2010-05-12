@@ -1,5 +1,4 @@
 WIP
-   Legend should display date range totals NOT todays data
    When only a few (or one) days data exists,
       - pad out date range to one week 
       - only use whole numbers, half look crappy
