@@ -1,49 +1,49 @@
-Bugs
-   Legend should display date range totals NOT todays data
-   Change call to action to "Signup in 10 seconds"
-
-Housekeeping
-   Fix invalid account code on production a/c
-   named routes for all accounts, eg http://metrixapp.com/ac/1
-   Tests for signup / login / creating events
-   minify metrix.js
-   auto-test live site
-   clean up routes (nice restful names)
-   remove all todo comments
-   data backup (heroku bundles)
+WIP
    
-Improvements to exisiting features
+Next
+   Legend should display date range totals NOT todays data
+   named routes for all accounts, eg http://metrixapp.com/ac/1
+   clean up routes (nice restful names)
    Add documentation to explain how to make an API call
-   Add browser frame to how it works section on landing page
-
-   When only a few (or one) days data exists, 
+   When only a few (or one) days data exists,
       pad out date range to one week 
-      maybe have minute by minute data instead
       only use whole numbers, half look crappy
-      
    Pick most frequent data line for date scroller, otherwise plot line looks crap
    Hint to turn on/off data lines
    % changes for metrix
-   /reports should have totals for entire period
-   track unique visitors with a cookie
-   3 step image (script/deploy/dashboard)
-   handle https requests for metrix.js
    Add to documentation: how to make a http call
+   up to the minute real time data
+   Rails helpers / plugin / engine
+   
+Bugs
+
+Housekeeping
+   Tests for signup / login / creating events
+   auto-test live site
+   remove all todo comments
+   minify metrix.js
+   
+Improvements to exisiting features
+   track unique visitors with a cookie
+   Update lander (prune left copy, add screen shot with browser frame to 'how it works' image)
    
 New features
-   up to the minute real time data
    identify visitor with an id/token
    Rest client event creation
-   Rails helpers / plugin / engine
    Rename your data points
+   Re-order data points
+   data backup (heroku bundles)
+   handle https requests for metrix.js
    
 Feedback from
    Matt
-   Steve
    Leancamp guys (phone call/email)
    Google ad campaigns
+   Steve
+   
    User testing
    Lean startup circle
+   
    Nathaniel Talbott
    Dave McClure
    Steve Blank
