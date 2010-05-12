@@ -31,6 +31,11 @@
          
          <% # TODO: refactor this to model
             events_by_date = @events.group_by(&:date)
+            
+            if events_by_date.keys.size == 1
+              events_by_date.merge!( { (events_by_date.keys.first.to_date - 1).to_s => [] } )
+            end
+            
             events = events_by_date.map do |eg|
                date = eg.first
                counts = []
@@ -69,7 +74,7 @@
            <y_left>
              <color>000000</color>
              <alpha>10</alpha>
-           </y_left>        
+           </y_left>
          </grid>
          <values>
            <x>

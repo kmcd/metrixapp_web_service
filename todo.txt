@@ -3,8 +3,6 @@ WIP
       - pad out date range to one week 
       - only use whole numbers, half look crappy
    Pick most frequent data line for date scroller, otherwise plot line looks crap
-   up to the minute real time data
-   % changes for metrix
    
 Next
    named routes for all accounts, eg http://metrixapp.com/ac/1
@@ -31,8 +29,8 @@ Improvements to exisiting features
    Update lander (prune left copy, add screen shot with browser frame to 'how it works' image)
    
 New features
+   up to the minute real time data
    identify visitor with an id/token
-   Rest client event creation
    Rename your data points
    Re-order data points
    data backup (heroku bundles)
