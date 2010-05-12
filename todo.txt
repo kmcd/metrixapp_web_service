@@ -1,20 +1,24 @@
 WIP
+   Legend should display date range totals NOT todays data
+   When only a few (or one) days data exists,
+      - pad out date range to one week 
+      - only use whole numbers, half look crappy
+   Pick most frequent data line for date scroller, otherwise plot line looks crap
+   up to the minute real time data
+   % changes for metrix
    
 Next
-   Legend should display date range totals NOT todays data
    named routes for all accounts, eg http://metrixapp.com/ac/1
    clean up routes (nice restful names)
-   Add documentation to explain how to make an API call
-   When only a few (or one) days data exists,
-      pad out date range to one week 
-      only use whole numbers, half look crappy
-   Pick most frequent data line for date scroller, otherwise plot line looks crap
-   Hint to turn on/off data lines
-   % changes for metrix
-   Add to documentation: how to make a http call
-   up to the minute real time data
+   Add documentation to explain how to make an http API call
    Rails helpers / plugin / engine
-   
+   Hint to turn on/off data lines
+   Send follow up email to leancamp guys:
+      - Sam Oliver
+      - Gywn Morfey
+      - Dave Ganley
+      - William Dale
+      
 Bugs
 
 Housekeeping
@@ -37,13 +41,12 @@ New features
    
 Feedback from
    Matt
-   Leancamp guys (phone call/email)
    Google ad campaigns
+      - setup goals
+      - setup conversion funnel
    Steve
-   
    User testing
    Lean startup circle
-   
    Nathaniel Talbott
    Dave McClure
    Steve Blank
