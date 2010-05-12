@@ -134,7 +134,15 @@
       <enabled>true</enabled>
       <height>40</height>    
       <connect>0</connect>
-      <graph_data_source>c0</graph_data_source>
+      
+      <%
+         largest = 0
+         @events.group_by(&:name).values.each_with_index do |events,index|
+            largest = index if events.size > largest
+         end 
+      %>
+      <graph_data_source>c<%= largest %></graph_data_source>
+      
       <resize_button_style>arrow</resize_button_style>
       <playback>
          <enabled>1</enabled>

@@ -1,8 +1,4 @@
 WIP
-   When only a few (or one) days data exists,
-      - pad out date range to one week 
-      - only use whole numbers, half look crappy
-   Pick most frequent data line for date scroller, otherwise plot line looks crap
    
 Next
    named routes for all accounts, eg http://metrixapp.com/ac/1
