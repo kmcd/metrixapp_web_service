@@ -1,11 +1,11 @@
-<script type="text/javascript" src="amstock/swfobject.js"></script>
+<script type="text/javascript" src="/swfobject.js"></script>
 
 <ol id='nav'>
    <li>
       <%= link_to 'Add event', new_report_path %>
    </li>
    <li>
-      <%= link_to 'Download CSV', reports_path(:format => :csv) %>
+      <%= link_to 'Download CSV', report_path(:id => params[:id], :format => :csv) %>
    </li>
 </ol>
 
@@ -21,8 +21,9 @@
 
 <script type="text/javascript">
 // <![CDATA[		
-   var so = new SWFObject("amstock.html", "amstock", "800", "500", "8", "#FFFFFF");
-   so.addVariable("settings_file", "/reports.xml");
+   // Heroku has a problem loading swf files so amstock.swf renamed to amstock.html
+   var so = new SWFObject("/amstock.html", "amstock", "800", "500", "8", "#FFFFFF");
+   so.addVariable("settings_file", "/reports/<%= params[:id] %>.xml");
    so.write("chart");
 // ]]>
 </script>

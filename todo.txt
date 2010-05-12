@@ -1,8 +1,6 @@
 WIP
    
 Next
-   named routes for all accounts, eg http://metrixapp.com/ac/1
-   clean up routes (nice restful names)
    Add documentation to explain how to make an http API call
    Rails helpers / plugin / engine
    Hint to turn on/off data lines

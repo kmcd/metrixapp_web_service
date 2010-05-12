@@ -13,7 +13,7 @@ body { font-family: verdana, sans-serif; font-size: 10pt; }
 .reports.new h1 { color: gainsboro; border-bottom: thin dotted silver; }
 .reports.new .blank_slate { background-color: rgb(255, 255, 175); color: black; }
 .reports.new .blank_slate h1 { color: black; border: none; }
-.reports.index p.hint { color: silver; }
+.reports.show p.hint { color: silver; }
 
 /* Layout */
 body { margin: 1em auto;  width: 800px; }
@@ -26,4 +26,4 @@ body { margin: 1em auto;  width: 800px; }
 .reports.new p { width: 80%; }
 .reports.new .blank_slate { padding: 0.6em 1.6em; margin-top: 4em; }
 .reports.new .blank_slate h1 { margin: 0; }
-.reports.index p.hint { width: 61.2%; }
+.reports.show p.hint { width: 61.2%; }
