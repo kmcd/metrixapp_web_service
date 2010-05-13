@@ -6,6 +6,7 @@ body { font-family: verdana, sans-serif; font-size: 10pt; }
 
 .reports.new h1, .reports.new h2, .reports.new h3 { font-weight: normal; }
 .reports.new pre { font-family: "andale mono", "courier new", courier, monospace; }
+.reports.show .help { list-style-type: none; }
 
 /* Color */
 .reports.new { color: gray; }
@@ -13,7 +14,7 @@ body { font-family: verdana, sans-serif; font-size: 10pt; }
 .reports.new h1, .reports.new h2,.reports.new h3 { color: black; }
 .reports.new .blank_slate { background-color: rgb(255, 255, 175); color: black; }
 .reports.new .blank_slate h1 { color: black; border: none; }
-.reports.show p.hint { color: silver; }
+.reports.show .help { color: gray; }
 
 /* Layout */
 body { margin: 1em auto;  width: 800px; }
@@ -27,4 +28,5 @@ body { margin: 1em auto;  width: 800px; }
 .reports.new p { width: 80%; }
 .reports.new .blank_slate { padding: 0.6em 1.6em; margin-top: 4em; }
 .reports.new .blank_slate h1 { margin: 0; }
-.reports.show p.hint { width: 61.2%; }
+.reports.new .blank_slate h1 { color: black; border: none; }
+.reports.show .help li { margin: 0.6em 0 ; }

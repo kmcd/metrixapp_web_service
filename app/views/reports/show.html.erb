@@ -13,12 +13,6 @@
    <p>You need to upgrade your Flash Player</p>
 </div>
 
-<p class='hint'>
-   Hint: hover your mouse over the graph. You can drag the diamonds on the 
-   bottom left and right to change the time scale. Also, hover over the plot
-   line for for daily totals.
-</p>
-
 <script type="text/javascript">
 // <![CDATA[		
    // Heroku has a problem loading swf files so amstock.swf renamed to amstock.html
@@ -27,5 +21,11 @@
    so.write("chart");
 // ]]>
 </script>
+
+<ol class='help'>
+   <li>Hover over plot line for daily totals</li>
+   <li>Click name on left to toggle data</li>
+   <li>Drag diamonds on bottom left &amp; right to change time scale</li>
+</ol>
 
 <%= metrixapp_log "Dashboard view" %>

@@ -1,14 +1,11 @@
 WIP
    Ruby gem wrapper for api call
-   Hint to turn on/off data lines
    
 Next
-   Update lander (prune left copy, add screen shot with browser frame to 'how it works' image)
    Send follow up email to leancamp guys:
       - Sam Oliver
       - Gywn Morfey
       - Dave Ganley
-      - William Dale
    
 Bugs
 
@@ -19,6 +16,9 @@ Housekeeping
    
 Improvements to exisiting features
    track unique visitors with a cookie
+   Update lander 
+      prune left copy
+      add screen shot with browser frame to 'how it works' image
    
 New features
    up to the minute real time data
