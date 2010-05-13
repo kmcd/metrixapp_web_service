@@ -1,12 +1,14 @@
 WIP
-   Ruby gem wrapper for api call
-   
-Next
    Send follow up email to leancamp guys:
       - Sam Oliver
       - Gywn Morfey
       - Dave Ganley
-   
+      
+Next
+   Update lander 
+      prune left copy
+      add screen shot with browser frame to 'how it works' image
+      
 Bugs
 
 Housekeeping
@@ -15,17 +17,15 @@ Housekeeping
    minify metrix.js
    
 Improvements to exisiting features
-   track unique visitors with a cookie
-   Update lander 
-      prune left copy
-      add screen shot with browser frame to 'how it works' image
+   Ruby gem wrapper for api call
+   up to the minute real time data
    
 New features
-   up to the minute real time data
    identify visitor with an id/token, eg metrixapp.identify('foo@example.org')
+   track unique visitors with a cookie
+   data backup (heroku bundles)
    Rename your data points
    Re-order data points
-   data backup (heroku bundles)
    handle https requests for metrix.js
    
 Feedback from
