@@ -11,9 +11,10 @@ h1,h3,em       { color: black; }
 dd.benefit { background: url('../images/tick.png') no-repeat 0% 10%; }
 #screenshots ol { font-style: italic; }
 #screenshots { border-left: thin dotted gray; }
+#screenshots pre { color: black; }
 
 /* Typography */
-body        { font-size: 12pt; font-family: verdana, sans-serif; }
+body        { font-size: 10.5pt; font-family: verdana, sans-serif; }
 h1, h2, #call2action, #trust, .dialog
             { font-family: helvetica, arial, sans-serif; }
 h1,h2,h3      { letter-spacing:-1px; }
@@ -24,6 +25,7 @@ h2          { font-weight: normal; }
 #copy em    { font-style: normal; }
 .dialog form.error p  { font-weight: bold; }
 #screenshots ol { list-style-type: none; }
+#screenshots pre { font: normal normal 10pt/1.6em "andale mono", sans-serif }
 
 /* Layout */
 body           { min-width: 950px; margin: 0; }
@@ -41,7 +43,7 @@ h2             { padding-bottom: 1em; }
 #screenshots ol li { margin-top: 1.6em; }
 
 #trust         { clear: both; padding: 1em 1%; margin-top: 4em; }
-dt             { margin-bottom: 0.6em; }
+dt             { margin: 2.4em 0 0.6em 0; }
 dd             { margin-bottom: 1em; }
 dd ol          { padding-left: 1em; }
 table.contact  { width: 61.2%; border-collapse: collapse; }

@@ -9,8 +9,8 @@ class Event < ActiveRecord::Base
   }
     
   def self.create_from_log(params)
-    create :account_code => params['account_code'], 
-      :name =>params['name'], :data => params['data']
+    create :account_code => params['account_code'], :name =>params['name'], 
+      :data => params['data']
   end
   
   def self.csv_for(account_code)

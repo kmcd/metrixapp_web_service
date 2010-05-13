@@ -1,6 +1,6 @@
 <% if current_user.blank_slate? -%>
    <div class='blank_slate'>
-      <h1>Thanks for signing up &mdash; only 5 mins to go &hellip;</h1>
+      <h2>Thanks for signing up &mdash; only 5 mins to go &hellip;</h2>
       
       <p>
          We haven&apos;t received any data from your application yet. 
@@ -30,7 +30,32 @@
    <%= metrixapp_log "New event" %>
 <% end -%>
 
-<h1>Add your tracking code</h1>
+<h1>Sending your data to MetrixApp</h1>
+
+<p>
+   You can send data to MetrixApp by make a HTTP request (with curl, wget etc.) 
+   or adding javascript to your web pages.
+</p>
+
+<h2>Make a HTTP request</h2>
+
+<pre>
+[base url]
+   http://www.metrixapp.com/log?
+   
+[parameters]
+   account_code   Your account code (<%= current_user.account.code %>)
+   name           The name of the event you wish log, eg signup
+   data           Any extra data you wish to log, must be valid JSON
+
+[examples]
+   wget http://www.metrixapp.com/log?&name=signup&account_code=<%= current_user.account.code %>
+   wget http://www.metrixapp.com/log?&name=signup&account_code=<%= current_user.account.code %>&data="{\"user_id\":\"1\"}"
+</pre>
+
+<h2>Logging events with Javascript</h2>
+
+<h3>Add your tracking code</h3>
 
 <p>
    Copy this tracking code EXACTLY and paste in the head section
@@ -46,7 +71,7 @@
 &lt;script type='text/javascript'&gt; try {  var metrix = new MetrixApp('<%= current_user.account.code %>'); } catch(err) {} &lt;/script&gt;</pre>
 </pre>
 
-<h1>Log your events</h1>
+<h3>Log your events</h3>
 
 <p>
    Once you&apos;ve added the tracking code you can easily log events.
@@ -62,7 +87,7 @@
 
 <pre>metrix.log("Signup", {'username':'bob', 'email':'bob@example.org'});</pre>
 
-<h1>Deploy your web page to production</h1>
+<h3>Deploy your web page to production</h3>
 <p>
    You must send us the data before you can view it, so you&apos;ll have to 
    deploy to production.

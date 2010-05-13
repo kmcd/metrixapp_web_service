@@ -1,30 +1,28 @@
 WIP
+   Ruby gem wrapper for api call
+   Hint to turn on/off data lines
    
 Next
-   Add documentation to explain how to make an http API call
-   Rails helpers / plugin / engine
-   Hint to turn on/off data lines
+   Update lander (prune left copy, add screen shot with browser frame to 'how it works' image)
    Send follow up email to leancamp guys:
       - Sam Oliver
       - Gywn Morfey
       - Dave Ganley
       - William Dale
-      
+   
 Bugs
 
 Housekeeping
    Tests for signup / login / creating events
    auto-test live site
-   remove all todo comments
    minify metrix.js
    
 Improvements to exisiting features
    track unique visitors with a cookie
-   Update lander (prune left copy, add screen shot with browser frame to 'how it works' image)
    
 New features
    up to the minute real time data
-   identify visitor with an id/token
+   identify visitor with an id/token, eg metrixapp.identify('foo@example.org')
    Rename your data points
    Re-order data points
    data backup (heroku bundles)
