@@ -1,5 +1,6 @@
 class ReportsController < ApplicationController
   before_filter :require_user
+  before_filter :authenticate_user, :only => :show
   
   def new
   end
@@ -31,5 +32,13 @@ class ReportsController < ApplicationController
   
   def setup_graph_data
     @events ||= Event.graph_data_for( Account.find(params[:id]).code )
+  end
+  
+  def authenticate_user
+    redirect_to report_path(current_user.account) if url_hacker?
+  end
+  
+  def url_hacker?
+    params[:id].to_s != current_user.account.to_param
   end
 end

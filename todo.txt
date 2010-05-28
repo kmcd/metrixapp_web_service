@@ -1,15 +1,15 @@
 WIP
    Send follow up email to leancamp guys:
-      - Sam Oliver
-      - Gywn Morfey
       - Dave Ganley
-      
+   Ruby gem wrapper for api call
+   
 Next
    Update lander 
       prune left copy
       add screen shot with browser frame to 'how it works' image
       
 Bugs
+   Chart should have 1 week as default time scale
 
 Housekeeping
    Tests for signup / login / creating events
@@ -17,7 +17,6 @@ Housekeeping
    minify metrix.js
    
 Improvements to exisiting features
-   Ruby gem wrapper for api call
    up to the minute real time data
    
 New features
